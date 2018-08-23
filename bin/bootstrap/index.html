@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<title>Collaborateurs</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+<link
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body>
+
+	<!-- Liste des onglets -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link" href="#">Collaborateur<span
+						class="sr-only">(current)</span></a></li>
+				<li class="nav-item"><a class="nav-link" href="#">Statistiques</a>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="#">Activités</a>
+				</li>
+		</div>
+		</div>
+	</nav>
+
+
+
+	<!-- Container barre de recherche -->
+	<div class="container">
+		<h2>Les collaborateurs</h2>
+
+		<br>
+
+		<!-- Ajouter un nouveau collaborateur -->
+		<div class="mx-auto" style="width: 200px;">
+			<a class="btn btn-primary" href="formulaire.html" role="button">Ajouter un
+				nouveau collaborateur</a>
+		</div>
+
+		<div class="w-100"></div>
+		<br>
+
+		<div class="row">
+
+			<!-- Barre de recherche -->
+			<div class="col">
+				<nav class="navbar navbar-light bg-light justify-content-between">
+					<a class="navbar-brand">Rechercher un nom ou un prénom qui
+						commence par</a>
+
+					<form class="form-inline">
+						<div class="col">
+							<input class="form-control mr-sm-2" type="search"
+								placeholder="Rechercher" aria-label="Rechercher">
+						</div>
+						<div class="col">
+							<button class="btn btn-outline-success my-2 my-sm-0"
+								type="Search">Rechercher</button>
+						</div>
+					</form>
+
+					<!-- Checkbox -->
+					<div class="col">
+						<label><input type="checkbox" value="">Voir les
+							collaborateurs désactivés</label>
+					</div>
+				</nav>
+
+
+
+			</div>
+		</div>
+	</div>
+
+	<br>
+
+
+	<!-- Container liste -->
+	<div class="container">
+		<div class="row">
+			<div class="col-4">
+				<p>Filtrer par département</p>
+			</div>
+
+			<!-- Dropdown-->
+			<div class="col-2">
+				<div class="dropdown">
+
+
+					<button class="btn btn-secondary btn-sm dropdown-toggle"
+						type="button" id="menu" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false">Tous</button>
+
+					<div class="dropdown-menu" aria-labelledby="menu">
+						<a class="dropdown-item" href="#">Comptabilité</a> <a
+							class="dropdown-item" href="#">Ressources Humaines</a> <a
+							class="dropdown-item" href="#">Informatique</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<br>
+	<br>
+
+
+
+	<!-- Container blocs cartes -->
+	<div class="container">
+
+		<!-- cartes 1.n -->
+		<div class="row">
+
+			<!-- carte 1.1 -->
+			<div class="col">
+				<div class="card">
+					<h5 class="card-header">NOM Prénom</h5>
+					<div class="card-body">
+						<img class="card-img float-left"
+							src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIIAAACqCAMAAABWImeUAAAAM1BMVEV/uN3////n8vn3+/2PweKXxeSHvN+31+yv0urP5PLv9vufyubf7fenzujX6fS/2+7H4PBr2NsNAAACwUlEQVR4nO3a23KDMAxFUYc7JAH+/2tL0+m0abjsI+z4oTrPnWYNlkHIhEv2hNwAJzjBCU5wghOc4AQnOMEJTnCCE3IRisyEYapCCPW1nW5lDkI51+FXqvs8vJVQ9vfwmqq1KQyEsWtWAI9cb28gFO3m7z9y18tCJNx2f/+xHPIu0QjF/iX4ypySgATyYigEKFAXQyBggbgYnFDWx79sWgxM0ATKYlCCKlgM9DpAgi5Y1iIu4aoLcE0ywmARhMCeGIww2wjXiARDJXymiUcwrkMIqIFAhOPn40bG/IQpPwHVY1pClZ+A/jv6oyI/4eKEM4R45WgmxNuUZkKbn9DnJ6D+MSkBVWNaAiqFtHdH1scTglXA+jZEGI0E1LAwwmQk1OxlhhA6IyF00Qim95jPxOugzYR47avxRSZEbF/L/ITL2qDzzQTrjSEi4VIZCejVmhFam4ANGBjBthLszgQJpj1Bh01w0GMZMKCujRMMxQAf1Zgw6HsCH00kmzvii8Cnr70maPghER8AS4JamMXzMbiyEnQziARlU0hnIpwg3CHhbVEmCMUAW2eZIBSDdmQqEHAjzV4lLQR8Z6AHEToBT6LFg0rlkJC+VYnntdJRKXyh0AQagS0Ff0AZCGxforbZTEDVoN2YklwF9TMKicAm8k3CHUE7J9GgEPAdWjOkeEYsBqVh4ASpeYRjJo0gtq+CgRJEgdI5QYIsWB7ZtCYZwTb2q9h3b4hgHjyGO2jnAaG0C5Y03dGCHBMs35A8p5p2F+SIULTWOdNT6n57k+4Shvn0FfjJZlnsEFa/qzyTplttJbYIt+3vKk8p2tfiXCUMcQpgPdVfxSuh7CMWAFH8JYyxC+BY8UQo0hTAgeKHMMwJC2BPEb4LwH70clbxIIynngKnc/hlc/ok34Eej8fj8Xg8Ho/H4/F4PB6Px+Px/Od8AA2TMoQaeofpAAAAAElFTkSuQmCC"
+							alt="PHOTO">
+						<p class="card-text">Fonction :</p>
+						<p class="card-text">Département :</p>
+						<p class="card-text">Email :</p>
+						<p class="card-text">Téléphone :</p>
+						<a href="#" class="btn btn-primary pull-right btn-sm RbtnMargin">Editer</a>
+					</div>
+				</div>
+			</div>
+			<!-- FIN carte 1.1 -->
+
+			<!-- carte 1.2 -->
+			<div class="col">
+				<div class="card">
+					<h5 class="card-header">NOM Prénom</h5>
+					<div class="card-body">
+						<img class="card-img float-left"
+							src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIIAAACqCAMAAABWImeUAAAAM1BMVEV/uN3////n8vn3+/2PweKXxeSHvN+31+yv0urP5PLv9vufyubf7fenzujX6fS/2+7H4PBr2NsNAAACwUlEQVR4nO3a23KDMAxFUYc7JAH+/2tL0+m0abjsI+z4oTrPnWYNlkHIhEv2hNwAJzjBCU5wghOc4AQnOMEJTnCCE3IRisyEYapCCPW1nW5lDkI51+FXqvs8vJVQ9vfwmqq1KQyEsWtWAI9cb28gFO3m7z9y18tCJNx2f/+xHPIu0QjF/iX4ypySgATyYigEKFAXQyBggbgYnFDWx79sWgxM0ATKYlCCKlgM9DpAgi5Y1iIu4aoLcE0ywmARhMCeGIww2wjXiARDJXymiUcwrkMIqIFAhOPn40bG/IQpPwHVY1pClZ+A/jv6oyI/4eKEM4R45WgmxNuUZkKbn9DnJ6D+MSkBVWNaAiqFtHdH1scTglXA+jZEGI0E1LAwwmQk1OxlhhA6IyF00Qim95jPxOugzYR47avxRSZEbF/L/ITL2qDzzQTrjSEi4VIZCejVmhFam4ANGBjBthLszgQJpj1Bh01w0GMZMKCujRMMxQAf1Zgw6HsCH00kmzvii8Cnr70maPghER8AS4JamMXzMbiyEnQziARlU0hnIpwg3CHhbVEmCMUAW2eZIBSDdmQqEHAjzV4lLQR8Z6AHEToBT6LFg0rlkJC+VYnntdJRKXyh0AQagS0Ff0AZCGxforbZTEDVoN2YklwF9TMKicAm8k3CHUE7J9GgEPAdWjOkeEYsBqVh4ASpeYRjJo0gtq+CgRJEgdI5QYIsWB7ZtCYZwTb2q9h3b4hgHjyGO2jnAaG0C5Y03dGCHBMs35A8p5p2F+SIULTWOdNT6n57k+4Shvn0FfjJZlnsEFa/qzyTplttJbYIt+3vKk8p2tfiXCUMcQpgPdVfxSuh7CMWAFH8JYyxC+BY8UQo0hTAgeKHMMwJC2BPEb4LwH70clbxIIynngKnc/hlc/ok34Eej8fj8Xg8Ho/H4/F4PB6Px+Px/Od8AA2TMoQaeofpAAAAAElFTkSuQmCC"
+							alt="PHOTO">
+						<p class="card-text">Fonction :</p>
+						<p class="card-text">Département :</p>
+						<p class="card-text">Email :</p>
+						<p class="card-text">Téléphone :</p>
+						<a href="#" class="btn btn-primary pull-right btn-sm RbtnMargin">Editer</a>
+					</div>
+				</div>
+			</div>
+			<!-- FIN carte 1.2 -->
+
+			<!-- carte 1.3 -->
+			<div class="col">
+				<div class="card">
+					<h5 class="card-header">NOM Prénom</h5>
+					<div class="card-body">
+						<img class="card-img float-left"
+							src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIIAAACqCAMAAABWImeUAAAAM1BMVEV/uN3////n8vn3+/2PweKXxeSHvN+31+yv0urP5PLv9vufyubf7fenzujX6fS/2+7H4PBr2NsNAAACwUlEQVR4nO3a23KDMAxFUYc7JAH+/2tL0+m0abjsI+z4oTrPnWYNlkHIhEv2hNwAJzjBCU5wghOc4AQnOMEJTnCCE3IRisyEYapCCPW1nW5lDkI51+FXqvs8vJVQ9vfwmqq1KQyEsWtWAI9cb28gFO3m7z9y18tCJNx2f/+xHPIu0QjF/iX4ypySgATyYigEKFAXQyBggbgYnFDWx79sWgxM0ATKYlCCKlgM9DpAgi5Y1iIu4aoLcE0ywmARhMCeGIww2wjXiARDJXymiUcwrkMIqIFAhOPn40bG/IQpPwHVY1pClZ+A/jv6oyI/4eKEM4R45WgmxNuUZkKbn9DnJ6D+MSkBVWNaAiqFtHdH1scTglXA+jZEGI0E1LAwwmQk1OxlhhA6IyF00Qim95jPxOugzYR47avxRSZEbF/L/ITL2qDzzQTrjSEi4VIZCejVmhFam4ANGBjBthLszgQJpj1Bh01w0GMZMKCujRMMxQAf1Zgw6HsCH00kmzvii8Cnr70maPghER8AS4JamMXzMbiyEnQziARlU0hnIpwg3CHhbVEmCMUAW2eZIBSDdmQqEHAjzV4lLQR8Z6AHEToBT6LFg0rlkJC+VYnntdJRKXyh0AQagS0Ff0AZCGxforbZTEDVoN2YklwF9TMKicAm8k3CHUE7J9GgEPAdWjOkeEYsBqVh4ASpeYRjJo0gtq+CgRJEgdI5QYIsWB7ZtCYZwTb2q9h3b4hgHjyGO2jnAaG0C5Y03dGCHBMs35A8p5p2F+SIULTWOdNT6n57k+4Shvn0FfjJZlnsEFa/qzyTplttJbYIt+3vKk8p2tfiXCUMcQpgPdVfxSuh7CMWAFH8JYyxC+BY8UQo0hTAgeKHMMwJC2BPEb4LwH70clbxIIynngKnc/hlc/ok34Eej8fj8Xg8Ho/H4/F4PB6Px+Px/Od8AA2TMoQaeofpAAAAAElFTkSuQmCC"
+							alt="PHOTO">
+						<p class="card-text">Fonction :</p>
+						<p class="card-text">Département :</p>
+						<p class="card-text">Email :</p>
+						<p class="card-text">Téléphone :</p>
+						<a href="#" class="btn btn-primary pull-right btn-sm RbtnMargin">Editer</a>
+					</div>
+				</div>
+			</div>
+			<!-- FIN carte 1.3 -->
+		</div>
+
+		<div class="w-100"></div>
+		<br>
+
+		<!-- cartes 2.n -->
+		<div class="row">
+
+			<!-- carte 2.1 -->
+			<div class="col">
+				<div class="card">
+					<h5 class="card-header">NOM Prénom</h5>
+					<div class="card-body">
+						<img class="card-img float-left"
+							src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIIAAACqCAMAAABWImeUAAAAM1BMVEV/uN3////n8vn3+/2PweKXxeSHvN+31+yv0urP5PLv9vufyubf7fenzujX6fS/2+7H4PBr2NsNAAACwUlEQVR4nO3a23KDMAxFUYc7JAH+/2tL0+m0abjsI+z4oTrPnWYNlkHIhEv2hNwAJzjBCU5wghOc4AQnOMEJTnCCE3IRisyEYapCCPW1nW5lDkI51+FXqvs8vJVQ9vfwmqq1KQyEsWtWAI9cb28gFO3m7z9y18tCJNx2f/+xHPIu0QjF/iX4ypySgATyYigEKFAXQyBggbgYnFDWx79sWgxM0ATKYlCCKlgM9DpAgi5Y1iIu4aoLcE0ywmARhMCeGIww2wjXiARDJXymiUcwrkMIqIFAhOPn40bG/IQpPwHVY1pClZ+A/jv6oyI/4eKEM4R45WgmxNuUZkKbn9DnJ6D+MSkBVWNaAiqFtHdH1scTglXA+jZEGI0E1LAwwmQk1OxlhhA6IyF00Qim95jPxOugzYR47avxRSZEbF/L/ITL2qDzzQTrjSEi4VIZCejVmhFam4ANGBjBthLszgQJpj1Bh01w0GMZMKCujRMMxQAf1Zgw6HsCH00kmzvii8Cnr70maPghER8AS4JamMXzMbiyEnQziARlU0hnIpwg3CHhbVEmCMUAW2eZIBSDdmQqEHAjzV4lLQR8Z6AHEToBT6LFg0rlkJC+VYnntdJRKXyh0AQagS0Ff0AZCGxforbZTEDVoN2YklwF9TMKicAm8k3CHUE7J9GgEPAdWjOkeEYsBqVh4ASpeYRjJo0gtq+CgRJEgdI5QYIsWB7ZtCYZwTb2q9h3b4hgHjyGO2jnAaG0C5Y03dGCHBMs35A8p5p2F+SIULTWOdNT6n57k+4Shvn0FfjJZlnsEFa/qzyTplttJbYIt+3vKk8p2tfiXCUMcQpgPdVfxSuh7CMWAFH8JYyxC+BY8UQo0hTAgeKHMMwJC2BPEb4LwH70clbxIIynngKnc/hlc/ok34Eej8fj8Xg8Ho/H4/F4PB6Px+Px/Od8AA2TMoQaeofpAAAAAElFTkSuQmCC"
+							alt="PHOTO">
+						<p class="card-text">Fonction :</p>
+						<p class="card-text">Département :</p>
+						<p class="card-text">Email :</p>
+						<p class="card-text">Téléphone :</p>
+						<a href="#" class="btn btn-primary pull-right btn-sm RbtnMargin">Editer</a>
+					</div>
+				</div>
+			</div>
+			<!-- FIN carte 2.1 -->
+
+			<!-- carte 2.2 -->
+			<div class="col">
+				<div class="card">
+					<h5 class="card-header">NOM Prénom</h5>
+					<div class="card-body">
+						<img class="card-img float-left"
+							src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIIAAACqCAMAAABWImeUAAAAM1BMVEV/uN3////n8vn3+/2PweKXxeSHvN+31+yv0urP5PLv9vufyubf7fenzujX6fS/2+7H4PBr2NsNAAACwUlEQVR4nO3a23KDMAxFUYc7JAH+/2tL0+m0abjsI+z4oTrPnWYNlkHIhEv2hNwAJzjBCU5wghOc4AQnOMEJTnCCE3IRisyEYapCCPW1nW5lDkI51+FXqvs8vJVQ9vfwmqq1KQyEsWtWAI9cb28gFO3m7z9y18tCJNx2f/+xHPIu0QjF/iX4ypySgATyYigEKFAXQyBggbgYnFDWx79sWgxM0ATKYlCCKlgM9DpAgi5Y1iIu4aoLcE0ywmARhMCeGIww2wjXiARDJXymiUcwrkMIqIFAhOPn40bG/IQpPwHVY1pClZ+A/jv6oyI/4eKEM4R45WgmxNuUZkKbn9DnJ6D+MSkBVWNaAiqFtHdH1scTglXA+jZEGI0E1LAwwmQk1OxlhhA6IyF00Qim95jPxOugzYR47avxRSZEbF/L/ITL2qDzzQTrjSEi4VIZCejVmhFam4ANGBjBthLszgQJpj1Bh01w0GMZMKCujRMMxQAf1Zgw6HsCH00kmzvii8Cnr70maPghER8AS4JamMXzMbiyEnQziARlU0hnIpwg3CHhbVEmCMUAW2eZIBSDdmQqEHAjzV4lLQR8Z6AHEToBT6LFg0rlkJC+VYnntdJRKXyh0AQagS0Ff0AZCGxforbZTEDVoN2YklwF9TMKicAm8k3CHUE7J9GgEPAdWjOkeEYsBqVh4ASpeYRjJo0gtq+CgRJEgdI5QYIsWB7ZtCYZwTb2q9h3b4hgHjyGO2jnAaG0C5Y03dGCHBMs35A8p5p2F+SIULTWOdNT6n57k+4Shvn0FfjJZlnsEFa/qzyTplttJbYIt+3vKk8p2tfiXCUMcQpgPdVfxSuh7CMWAFH8JYyxC+BY8UQo0hTAgeKHMMwJC2BPEb4LwH70clbxIIynngKnc/hlc/ok34Eej8fj8Xg8Ho/H4/F4PB6Px+Px/Od8AA2TMoQaeofpAAAAAElFTkSuQmCC"
+							alt="PHOTO">
+						<p class="card-text">Fonction :</p>
+						<p class="card-text">Département :</p>
+						<p class="card-text">Email :</p>
+						<p class="card-text">Téléphone :</p>
+						<a href="#" class="btn btn-primary pull-right btn-sm RbtnMargin">Editer</a>
+					</div>
+				</div>
+			</div>
+			<!-- FIN carte 2.2 -->
+
+			<!-- carte 2.3 -->
+			<div class="col">
+				<div class="card">
+					<h5 class="card-header">NOM Prénom</h5>
+					<div class="card-body">
+						<img class="card-img float-left"
+							src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIIAAACqCAMAAABWImeUAAAAM1BMVEV/uN3////n8vn3+/2PweKXxeSHvN+31+yv0urP5PLv9vufyubf7fenzujX6fS/2+7H4PBr2NsNAAACwUlEQVR4nO3a23KDMAxFUYc7JAH+/2tL0+m0abjsI+z4oTrPnWYNlkHIhEv2hNwAJzjBCU5wghOc4AQnOMEJTnCCE3IRisyEYapCCPW1nW5lDkI51+FXqvs8vJVQ9vfwmqq1KQyEsWtWAI9cb28gFO3m7z9y18tCJNx2f/+xHPIu0QjF/iX4ypySgATyYigEKFAXQyBggbgYnFDWx79sWgxM0ATKYlCCKlgM9DpAgi5Y1iIu4aoLcE0ywmARhMCeGIww2wjXiARDJXymiUcwrkMIqIFAhOPn40bG/IQpPwHVY1pClZ+A/jv6oyI/4eKEM4R45WgmxNuUZkKbn9DnJ6D+MSkBVWNaAiqFtHdH1scTglXA+jZEGI0E1LAwwmQk1OxlhhA6IyF00Qim95jPxOugzYR47avxRSZEbF/L/ITL2qDzzQTrjSEi4VIZCejVmhFam4ANGBjBthLszgQJpj1Bh01w0GMZMKCujRMMxQAf1Zgw6HsCH00kmzvii8Cnr70maPghER8AS4JamMXzMbiyEnQziARlU0hnIpwg3CHhbVEmCMUAW2eZIBSDdmQqEHAjzV4lLQR8Z6AHEToBT6LFg0rlkJC+VYnntdJRKXyh0AQagS0Ff0AZCGxforbZTEDVoN2YklwF9TMKicAm8k3CHUE7J9GgEPAdWjOkeEYsBqVh4ASpeYRjJo0gtq+CgRJEgdI5QYIsWB7ZtCYZwTb2q9h3b4hgHjyGO2jnAaG0C5Y03dGCHBMs35A8p5p2F+SIULTWOdNT6n57k+4Shvn0FfjJZlnsEFa/qzyTplttJbYIt+3vKk8p2tfiXCUMcQpgPdVfxSuh7CMWAFH8JYyxC+BY8UQo0hTAgeKHMMwJC2BPEb4LwH70clbxIIynngKnc/hlc/ok34Eej8fj8Xg8Ho/H4/F4PB6Px+Px/Od8AA2TMoQaeofpAAAAAElFTkSuQmCC"
+							alt="PHOTO">
+						<p class="card-text">Fonction :</p>
+						<p class="card-text">Département :</p>
+						<p class="card-text">Email :</p>
+						<p class="card-text">Téléphone :</p>
+						<a href="#" class="btn btn-primary pull-right btn-sm RbtnMargin">Editer</a>
+					</div>
+				</div>
+			</div>
+			<!-- FIN carte 2.3 -->
+
+		</div>
+
+	</div>
+
+	<br>
+
+
+</body>
+</html>
