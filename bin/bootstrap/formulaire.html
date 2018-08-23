@@ -25,24 +25,24 @@
 
 
 <script>
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
+	// Example starter JavaScript for disabling form submissions if there are invalid fields
+	(function() {
+		'use strict';
+		window.addEventListener('load', function() {
+			// Fetch all the forms we want to apply custom Bootstrap validation styles to
+			var forms = document.getElementsByClassName('needs-validation');
+			// Loop over them and prevent submission
+			var validation = Array.prototype.filter.call(forms, function(form) {
+				form.addEventListener('submit', function(event) {
+					if (form.checkValidity() === false) {
+						event.preventDefault();
+						event.stopPropagation();
+					}
+					form.classList.add('was-validated');
+				}, false);
+			});
+		}, false);
+	})();
 </script>
 
 
@@ -50,6 +50,8 @@
 
 <body>
 
+
+	<!-- Formulaire -->
 	<div class="container">
 		<h2>Nouveau collaborateur</h2>
 
@@ -59,10 +61,9 @@
 
 				<!-- Saisir le nom -->
 				<div class="col-md-4 mb-3">
-					<label for="validationCustom01">Nom</label>
-					<input type="text"
-						class="form-control" id="validationCustom01"
-						placeholder="nom" required>
+					<label for="validationCustom01">Nom</label> <input type="text"
+						class="form-control" id="validationCustom01" placeholder="nom"
+						required>
 					<div class="invalid-feedback">Le nom est obligatoire</div>
 				</div>
 
@@ -70,10 +71,9 @@
 
 				<!-- Saisir le prénom -->
 				<div class="col-md-4 mb-3">
-					<label for="validationCustom02">Prénom</label>
-					<input type="text"
-						class="form-control" id="validationCustom02"
-						placeholder="prénom" required>
+					<label for="validationCustom02">Prénom</label> <input type="text"
+						class="form-control" id="validationCustom02" placeholder="prénom"
+						required>
 					<div class="invalid-feedback">Le prénom est obligatoire</div>
 				</div>
 
@@ -81,45 +81,79 @@
 
 				<!-- Saisir la date de naissance -->
 				<div class="col-md-4 mb-3">
-					<label for="validationCustom03">Date de naissance</label>
-					<input type="text"
-						class="form-control" id="validationCustom03"
+					<label for="validationCustom03">Date de naissance</label> <input
+						type="date" class="form-control" id="validationCustom03"
 						placeholder="date de naissance" required>
-					<div class="invalid-feedback">La date de naissance est obligatoire</div>
+					<div class="invalid-feedback">La date de naissance est
+						obligatoire</div>
 				</div>
 
 
 				<div class="w-100"></div>
 
 				<!-- Saisir l'adresse -->
-					<div class="col-md-4 mb-3">
-					<label for="validationCustom04">Adresse</label>
-					<input type="text"
-						class="form-control" id="validationCustom04"
-						placeholder="adresse" required>
+				<div class="col-md-4 mb-3">
+					<label for="validationCustom04">Adresse</label> <input type="text"
+						class="form-control" id="validationCustom04" placeholder="adresse"
+						required>
 					<div class="invalid-feedback">L'adresse est obligatoire</div>
 				</div>
 
 				<div class="w-100"></div>
-				
-				
+
+
 				<!-- Saisir le numéro de sécurité sociale -->
-					<div class="col-md-4 mb-3">
+				<div class="col-md-4 mb-3">
 					<label for="validationCustom05">Numéro de sécurité sociale</label>
-					<input type="text"
-						class="form-control" id="validationCustom05"
+					<input type="number" class="form-control" id="validationCustom05"
 						placeholder="numéro de sécurité sociale" required>
-					<div class="invalid-feedback">Le numéro de sécurité sociale est obligatoire</div>
+					<div class="invalid-feedback">Le numéro de sécurité sociale
+						est obligatoire</div>
 				</div>
 
 				<div class="w-100"></div>
 
 			</div>
-			
-			<!-- Créer -->
-			<button class="btn btn-primary" type="submit">Créer</button>
+
+
+			<!-- Button trigger modal -->
+			<button type="button" class="btn btn-primary" data-toggle="modal"
+				data-target="#exampleModal">Créer</button>
 
 		</form>
+	</div>
+
+
+
+	<!-- Modal -->
+
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Création d'un
+						collaborateur</h5>
+					<div class="w-100"></div>
+
+					<label for="validationmodal">Vous êtes sur le point de
+						créer un nouveau collaborateur</label>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">...</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal">Fermer</button>
+					<button type="button" class="btn btn-primary">Valider</button>
+				</div>
+			</div>
+		</div>
 	</div>
 
 
